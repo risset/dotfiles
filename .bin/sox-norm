@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Normalise input audio to DB level
+
+DB=-6.0
+
+cp -rv "$1" "$1.temp"
+sox "$1.temp" "$1" norm $DB;
+rm "$1.temp"
+

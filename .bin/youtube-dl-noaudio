@@ -1,0 +1,5 @@
+#!/bin/sh
+
+youtube-dl --format best $1
+
+ffmpeg -i *.mp4 -c copy -an no_audio.mp4

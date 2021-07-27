@@ -1,0 +1,9 @@
+[general]
+bar_width = 1
+
+[input]
+method = fifo
+source = /tmp/mpd.fifo
+
+[color]
+foreground = red

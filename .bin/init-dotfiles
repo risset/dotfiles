@@ -1,0 +1,13 @@
+#!/bin/sh
+
+DIR=$HOME/.dotfiles
+
+git init --bare $DIR
+alias dotfiles='/usr/bin/git --git-dir=$DIR --work-tree=$HOME'
+dotfiles config --local status.showUntrackedFiles no
+
+if [ $(grep -c dotfiles ~/.bashrc) = 1 ]; then
+    exit 0;
+else
+    echo "alias dotfiles ='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> $HOME/.bashrc
+fi;

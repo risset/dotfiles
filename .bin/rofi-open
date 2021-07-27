@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Directories to search in
+DIRS='/mnt/storage/videos'
+
+# Filetypes to ignore
+IGNORE="!{*.srt,*.txt,*.nfo}"
+
+# Ripgrep command
+RG="rg --no-messages --files $DIRS --glob $IGNORE"
+
+# Rofi command
+ROFI="rofi -threads 0 -dmenu -sort -sorting-method fzf -i -p > "
+
+# Open file
+xdg-open "$($RG | $ROFI)"

@@ -1,0 +1,14 @@
+#!/bin/sh
+
+BACKEND=ALSA
+RATE=48000
+PERIOD=64
+NPERIODS=2
+DEVICE=hw:USB
+
+jack_control start
+jack_control ds $BACKEND
+jack_control dps device $DEVICE
+jack_control dps rate $RATE
+jack_control dps nperiods $NPERIODS
+jack_control dps period $PERIOD
