@@ -13,6 +13,7 @@ alias grep='grep -i --color=auto'
 alias fgrep='fgrep -i --color=auto'
 alias egrep='egrep -i --color=auto'
 
+
 # Shell
 alias duh='sudo du -h --max-depth=1'
 
@@ -20,6 +21,7 @@ alias duh='sudo du -h --max-depth=1'
 alias build='cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=1 && mv compile_commands.json ..'
 
 # Applications
+alias e=emacsclient
 alias restartemacs='killall -9 emacs && emacs --daemon &'
 alias tmr='transmission-remote'
 alias tn='tmux new-session -s'
@@ -34,3 +36,4 @@ alias createdb='sudo -iu postgres createdb'
 
 # Git
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+

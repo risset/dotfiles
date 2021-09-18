@@ -8,12 +8,12 @@ Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
 ! Rofi
-rofi.font: Source Code Pro 12
+rofi.font: Source Code Pro 10
 
 ! Urxvt
 URxvt.perl-ext-common: default
 
-URxvt*font: xft:Source Code Pro:size=12
+URxvt*font: xft:Source Code Pro:size=10
 URxvt.scrollBar: false
 URxvt.cursorBlink: true
 URxvt*depth: 32

@@ -80,3 +80,15 @@ aws-list-instances()
     local query="Reservations[].Instances[].InstanceId"
     aws ec2 describe-instances --filters $filters --query $query
 }
+
+# Last N installed arch packages 
+lastpac() 
+{
+    expac --timefmt='%d-%m-%Y %T' '%l\t%n' | sort | tail -n $1
+}
+
+# Fuzzy search of installed packages, displaying package info
+pacbrowse()
+{
+    pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'
+}
